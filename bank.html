@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+
+	<style type="text/css">
+		body
+		{
+			background: peachpuff;
+		}
+	</style>
+
+	<script type="text/javascript">
+
+		function abc() 
+		{
+			var a=document.getElementById('amt').value;
+			var b=document.getElementById('mth').value;
+
+			a=+a;
+			b=+b;
+
+			var int=0.05;
+
+			var interest=a*int; //100*0.05=5
+
+			var repay=a+interest; //100+5=105
+
+			var emi=repay/b; //105/12
+
+			document.getElementById('y').innerHTML=emi;
+
+			var int=0.08;
+
+			var interest=a*int; //100*0.05=5
+
+			var repay=a+interest; //100+5=105
+
+			var emi=repay/b; //105/12
+
+			document.getElementById('z').innerHTML=emi;
+
+			
+			var int=0.012;
+
+			var interest=a*int; //100*0.05=5
+
+			var repay=a+interest; //100+5=105
+
+			var emi=repay/b; //105/12
+
+			document.getElementById('q').innerHTML=emi;		
+		}
+
+		
+
+
+
+		
+
+	</script>
+
+
+</head>
+<body>
+
+	<b>Loan amount:</b> <input type="text" name="" id="amt"><br><br>
+
+	<b>Month:</b>
+	<select id="mth">
+		<option value="12">12</option>
+		<option value="24">24</option>
+		<option value="36">36</option>
+		<option value="48">48</option>
+		<option value="60">60</option>
+	</select><br><br>
+
+
+
+	<table border="1" width="100%" height=300px; id="x" style="background: lightgray; color: darkorchid; font-size: 20px;">
+		<tr>
+			<td>Bank</td>
+			<td>AXIS</td>
+			<td>ICICI</td>
+			<td>HDFC</td>
+		</tr>
+		<tr>
+			<td>Home Loan</td>
+			<td><p id="y"></p></td>
+			<td><p id="z"></p></td>
+			<td><p id="q"></p></td>
+		</tr>
+	</table><br>
+
+	
+	<input type="button" name="" value="Click me" onclick="abc()"><br>
+
+	
+	
+</body>
+</html>
